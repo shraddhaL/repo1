@@ -43,9 +43,9 @@ pipeline {
       
       stage('Docker Tomcat server') {
               steps {
-               		sh 'docker stop mytomcatimage'
-			sh 'docker rm mytomcatimage'
+               		
 			sh 'docker run -d --name mytomcatimage -p 9090:8080 shivani221/mytomcatimage:latest'
+		      
             }
         }
 	 
@@ -57,8 +57,9 @@ pipeline {
         
         
          stage('Docker Cleanup') {
-              steps {
- 		          		         sh 'docker system prune --all --volumes --force'
+              steps {//  sh 'docker stop mytomcatimage'
+			//sh 'docker rm mytomcatimage'
+ 		        sh 'docker system prune --all --volumes --force'
             }
         }
         
