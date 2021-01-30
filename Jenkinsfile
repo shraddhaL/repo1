@@ -7,7 +7,7 @@ pipeline {
     stages { 	
 	    stage('Clone repository') {
 			   steps {	       
-				  git 'https://github.com/shraddhaL/jenkinsdocker-local.git' }
+				git branch: '*/main', url:'https://github.com/ShivaniJ-hub/MusicStoreDemo.git'//  git 'https://github.com/shraddhaL/jenkinsdocker-local.git' }
         
 			   }
 	    
