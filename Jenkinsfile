@@ -8,7 +8,7 @@ pipeline {
 	    stage('Clone repository') {
 			   steps {	       
 				git branch: 'main', url:'https://github.com/ShivaniJ-hub/MusicStoreDemo.git'//  git 'https://github.com/shraddhaL/jenkinsdocker-local.git' }
-        
+			   }
 			   }
 	    
 	  stage('Build Jar') {
@@ -60,5 +60,4 @@ pipeline {
         }
         
         }
-}
 }
