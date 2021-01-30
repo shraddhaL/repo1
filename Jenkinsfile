@@ -10,7 +10,7 @@ pipeline {
     stages { 	
 	    stage('Clone repository') {
 			   steps {	       
-				 git branch: 'main', url: 'https://github.com/ShivaniJ-hub/MusicStoreDemo.git' }
+				 git branch: '*\main', url: 'https://github.com/ShivaniJ-hub/MusicStoreDemo.git' }
         
 			   }
 	    
